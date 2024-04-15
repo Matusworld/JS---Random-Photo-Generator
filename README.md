@@ -4,6 +4,10 @@
 
 This project is a web application that allows users to generate random images from specified categories using the Random Image API. Users can select from a variety of categories like nature, city, technology, and more to get images that fit their choice.
 
+## Purpose
+
+This project serves as a simple platform for me to learn JavaScript and related technologies. It is not intended for production use but as a sandbox where I can experiment with API integration, asynchronous JavaScript, and server/client interaction in a controlled environment.
+
 ## Features
 
 - Image generation with category selection
