@@ -16,10 +16,16 @@ form.addEventListener("submit", async (e) => {
     body: JSON.stringify({ category: data.get("category") }),
   });
 
-  const { image } = await response.json();
+  if (response.ok) {
+    const { image } = await response.json();
 
-  const result = document.querySelector("#result");
-  result.innerHTML = `<img src="${image}" width="512" />`;
+    const result = document.querySelector("#result");
+    result.innerHTML = `<img src="${image}" width="512" />`;
+  } else {
+    const err = await response.text();
+    alert(err);
+    console.error(err);
+  }
 
   hideSpinner();
 });
