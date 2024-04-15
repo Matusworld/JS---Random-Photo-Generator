@@ -9,16 +9,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const apiKey = process.env.NINJASAPI;
-const categories = [
-  "nature",
-  "city",
-  "technology",
-  "food",
-  "still_life",
-  "abstract",
-  "wildlife",
-]; // List of possible categories
 app.post("/image-gen", async (req, res) => {
   try {
     // Fixed width and height
